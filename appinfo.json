@@ -1,0 +1,26 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Omeed Rabani",
+    "longName": "Concise Date With Time Watchface",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/Pebble Concise Watchface Screenshot.png",
+                "menuIcon": true,
+                "name": "conciseWatchfaceScreenshot",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "Concise",
+    "uuid": "67d29055-75fe-48eb-9f57-2e90af2f8ee9",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
