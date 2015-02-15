@@ -88,6 +88,8 @@ static void main_window_load(Window *window) {
 static void main_window_unload(Window *window) {
 	// Destroy TextLayer
   text_layer_destroy(s_time_layer);
+  text_layer_destroy(s_border_layer);
+	text_layer_destroy(s_date_layer);
 }
 
 static void init() {
