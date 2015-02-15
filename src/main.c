@@ -18,7 +18,7 @@ static void update_time() {
     strftime(buffer, sizeof("00:00"), "%H:%M", tick_time);
   } else {
     // Use 12 hour format
-    strftime(buffer, sizeof("00:00"), "%I:%M", tick_time);
+    strftime(buffer, sizeof("00:00"), "%l:%M", tick_time);
   }
 	
 	// Display this time on the TextLayer
@@ -34,7 +34,7 @@ static void update_date(){
 	// Create a long-lived buffer
   static char buffer[] = "..............";
 	
-	strftime(buffer, sizeof(buffer), "%a %b %d", tick_time);
+	strftime(buffer, sizeof(buffer), "%a %b %e", tick_time);
 	
 	// Display this time on the TextLayer
   text_layer_set_text(s_date_layer, buffer);
@@ -54,7 +54,7 @@ static void main_window_load(Window *window) {
 	
 	// Improve the layout to be more like a watchface
 	text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_ROBOTO_BOLD_SUBSET_49));
-  text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
+  text_layer_set_text_alignment(s_time_layer, GTextAlignmentLeft);
 	
 	// Add it as a child layer to the Window's root layer
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_time_layer));
