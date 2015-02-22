@@ -1,10 +1,12 @@
 {
-    "appKeys": {},
+    "appKeys": {
+        "temperature": 0
+    },
     "capabilities": [
-        ""
+        "location"
     ],
     "companyName": "Omeed Rabani",
-    "longName": "Concise Date With Time Watchface",
+    "longName": "Time, Date, and Weather Watchface",
     "projectType": "native",
     "resources": {
         "media": [
@@ -16,10 +18,10 @@
             }
         ]
     },
-    "shortName": "Concise",
+    "shortName": "Date, Time, Weather",
     "uuid": "67d29055-75fe-48eb-9f57-2e90af2f8ee9",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }
