@@ -9,8 +9,8 @@ Update 1.1: This update brings with it weather information along the top of the 
 Available at:
 https://apps.getpebble.com/applications/54dfe5dcc789cf55b200003b
 
-Version 1.0 Available at (as of Feb. 15, 2015)
+Version 1.0 (as of Feb. 15, 2015)
 * Gives date and time information.
 
-Version 1.1 Available at (as of Mar. 24, 2015)
+Version 1.1 Currently published (as of Mar. 24, 2015)
 * Gives weather information.
