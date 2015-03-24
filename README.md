@@ -1,5 +1,5 @@
 # ConciseDateWithTimeWatchface
-Repo for Watchface "Concise Date With Time"
+Repo for Watchface "Concise Date, Time, Temperature"
 
 ## Description
 Similar to the stock watchface, this face displays the date and the time in a concise manner. It also displays an abbreviation for the day of the week in front of the abbreviated month name. Also displays weather information along the top of the watchface. 
