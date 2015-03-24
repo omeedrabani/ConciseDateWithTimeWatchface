@@ -24,7 +24,21 @@ void sync_tuple_changed_callback(const uint32_t key,
   }
 }
 
+static void request_weather(void) {
+  DictionaryIterator *iter;
+  app_message_outbox_begin(&iter);
 
+  if (!iter) {
+    // Error creating outbound message
+    return;
+  }
+
+  int value = 1;
+  dict_write_int(iter, 1, &value, sizeof(int), true);
+  dict_write_end(iter);
+
+  app_message_outbox_send();
+}
 
 // http://stackoverflow.com/questions/21150193/logging-enums-on-the-pebble-watch/21172222#21172222
 char *translate_error(AppMessageResult result) {
@@ -93,8 +107,7 @@ static void update_date(){
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 	update_time();
-	if (units_changed == DAY_UNIT)
-		update_date();
+	update_date();
 }
 
 static void init_clock(Window *window) {
@@ -130,10 +143,10 @@ static void init_location_search(Window *window) {
   s_weather_layer = text_layer_create(GRect(0,0,144,70));
   text_layer_set_text(s_weather_layer, "Loading...");
   text_layer_set_text_color(s_weather_layer, GColorClear);
-  text_layer_set_text_alignment(s_weather_layer, GTextAlignmentLeft);
+  text_layer_set_text_alignment(s_weather_layer, GTextAlignmentCenter);
   text_layer_set_background_color(s_weather_layer, GColorBlack);
   text_layer_set_overflow_mode(s_weather_layer, GTextOverflowModeFill);
-  text_layer_set_font(s_weather_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
+  text_layer_set_font(s_weather_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18));
   layer_add_child(window_layer, text_layer_get_layer(s_weather_layer));
  
   Tuplet initial_values[] = {
@@ -167,6 +180,7 @@ static void main_window_load(Window *window) {
 	// Make sure the time and date is displayed from the start
 	update_time();
 	update_date();
+	request_weather();
 }
 
 static void main_window_unload(Window *window) {

@@ -1,24 +1,29 @@
 {
     "appKeys": {
-        "temperature": 0
+        "TEMPERATURE": 0
     },
     "capabilities": [
         "location"
     ],
     "companyName": "Omeed Rabani",
-    "longName": "Time, Date, and Weather Watchface",
+    "longName": "Time, Date, and Temperature Watchface",
     "projectType": "native",
     "resources": {
         "media": [
             {
-                "file": "images/Pebble Concise Watchface Screenshot.png",
-                "menuIcon": true,
-                "name": "conciseWatchfaceScreenshot",
+                "file": "images/version1p1Screenshot.png",
+                "name": "version1p1Screenshot",
+                "type": "png"
+            },
+            {
+                "file": "images/version1p0Screenshot.png",
+                "name": "version1p0Screenshot",
                 "type": "png"
             }
         ]
     },
-    "shortName": "Date, Time, Weather",
+    "sdkVersion": "2",
+    "shortName": "Date, Time, Temp",
     "uuid": "67d29055-75fe-48eb-9f57-2e90af2f8ee9",
     "versionCode": 1,
     "versionLabel": "1.1",
