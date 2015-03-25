@@ -26,7 +26,7 @@
     "shortName": "Date, Time, Temp",
     "uuid": "67d29055-75fe-48eb-9f57-2e90af2f8ee9",
     "versionCode": 1,
-    "versionLabel": "1.1",
+    "versionLabel": "1.11",
     "watchapp": {
         "watchface": true
     }

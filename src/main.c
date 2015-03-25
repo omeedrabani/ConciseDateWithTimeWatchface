@@ -150,7 +150,7 @@ static void init_location_search(Window *window) {
   layer_add_child(window_layer, text_layer_get_layer(s_weather_layer));
  
   Tuplet initial_values[] = {
-     TupletCString(TEMPERATURE, "Loading...")
+     TupletCString(TEMPERATURE, "")
   };
  
   app_sync_init(&sync, sync_buffer, sizeof(sync_buffer), initial_values, ARRAY_LENGTH(initial_values),
